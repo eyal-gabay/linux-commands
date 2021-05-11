@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+from sys import argv
+from os import system
+
+if len(argv) == 1:
+    exit("no argv")
+system(f"find / 2>/dev/null|grep -i {argv[1]}")
+
+
