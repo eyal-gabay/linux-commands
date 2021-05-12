@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import sys
+from os import popen
+
+
+file = sys.argv[1]
+a = []
+for line in popen(f"xxd {file}").read().splitlines():
+    a.append(line[-16:])
+else:
+    print("".join(a))
